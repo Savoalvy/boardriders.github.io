@@ -1,5 +1,3 @@
-
-
 //Цвета
 $colors: (
         black: #000000,
@@ -68,41 +66,3 @@ $font-H4-Capital: (
 );
 
 //Текста
-
-$text-config: (
-        header: (
-                first-layer: (
-                        location: 'Ваш регион доставки:',
-                        shops: 'Магазины',
-                        help: 'Помощь',
-                        blog: 'Блог',
-                        free-delivery: 'Бесплатная доставка *',
-                        payment: 'Оплата при получении',
-                        purchase-returns: 'Возврат в течение 14 дней'
-                ),
-                second-layer: (
-                        men: 'Мужчинам',
-                        women: 'Женщинам',
-                        children: 'Детям',
-                        login: 'Войти',
-                        favorites: 'Избраное',
-                        basket: 'Корзина',
-                        search: 'Поиск'
-                ),
-                third-layer: (
-                        novelty: 'Новинки',
-                        snowboard: 'Сноуборд',
-                        skis: 'Лыжи',
-                        skate: 'Скейт',
-                        songboard: 'Лонгборд',
-                        sakeboard: 'Вейкборд',
-                        surf: 'Серф',
-                        sup: 'Sup',
-                        sloth: 'Одежда',
-                        shoes: 'Обувь',
-                        accessories: 'Аксессуары',
-                        brands: 'Бренды',
-                        sale: 'Распродажа'
-                )
-        )
-);

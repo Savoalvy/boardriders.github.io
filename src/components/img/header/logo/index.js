@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Icon = () => (
+const IconLogo = () => (
   <svg
     width="243"
     height="50"
@@ -23,4 +23,4 @@ const Icon = () => (
   </svg>
 );
 
-export default Icon;
+export default IconLogo;

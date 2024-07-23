@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Icon = () => (
+const IconFavourites = () => (
   <svg width="55" height="40" viewBox="0 0 55 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M28.2584 17.8959L28 17.74L27.7416 17.8959L21.3382 21.7608L23.0271 14.4769L23.0951 14.1837L22.8677 13.9864L17.2199 9.08466L24.671 8.44215L24.9707 8.4163L25.0883 8.13936L28 1.27966L30.9117 8.13936L31.0293 8.4163L31.329 8.44215L38.7786 9.08454L33.1206 13.9861L32.8925 14.1837L32.9611 14.4776L34.6599 21.7596L28.2584 17.8959Z"
@@ -14,4 +14,4 @@ const Icon = () => (
   </svg>
 );
 
-export default Icon;
+export default IconFavourites;
