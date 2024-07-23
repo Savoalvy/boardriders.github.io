@@ -1,0 +1,39 @@
+@import '../styles/mixins';
+
+.header {
+  width: 100%;
+  max-height: 204px;
+  height: 100%;
+  background-color: blueviolet;
+
+  @include center-flex(column);
+
+  .first-layer,
+  .second-layer,
+  .third-layer {
+    width: inherit;
+    height: inherit;
+    @include center-flex(row);
+  }
+
+  .first-layer {
+    @include background-color(black);
+    @include color(white);
+    max-height: 50px;
+  }
+
+  .second-layer {
+    @include background-color(white);
+    max-height: 94px;
+  }
+
+  .third-layer {
+    @include background-color(light-gray);
+    max-height: 60px;
+  }
+
+  .content-width {
+    @include content-width;
+    @include center-flex(row)
+  }
+}

@@ -1,0 +1,108 @@
+
+
+//Цвета
+$colors: (
+        black: #000000,
+        white: #ffffff,
+        dark-Gray: #828b8d,
+        gray: #ced4d7,
+        light-gray: #f9f9f9,
+        green: #219653,
+        red: #eb5757,
+        gray-1: #ced4d7
+);
+
+//Шрифты
+$font-H0: (
+        font-family: Gtrsk Peta,
+        font-style: bold,
+        font-size: 48px,
+        line-height: Auto,
+        letter-spacing: -2,
+        color: #000000
+);
+
+$font-H1: (
+        font-family: Gtrsk Peta,
+        font-style: bold,
+        font-size: 32px,
+        line-height: 40,
+        letter-spacing: -2,
+        color: #000000
+);
+
+$font-H1-1: (
+        font-family: Gtrsk Peta,
+        font-style: bold,
+        font-size: 32px,
+        line-height: Auto,
+        letter-spacing: -2,
+        color: #000000
+);
+
+$font-H2: (
+        font-family: Gtrsk Peta,
+        font-style: bold,
+        font-size: 21px,
+        line-height: 35,
+        letter-spacing: -2,
+        color: #000000
+);
+
+$font-H3-Capital: (
+        font-family: Gtrsk Peta,
+        font-style: medium,
+        font-size: 16px,
+        line-height: 30,
+        letter-spacing: -2,
+        color: #000000
+);
+
+$font-H4-Capital: (
+        font-family: Gtrsk Peta,
+        font-style: medium,
+        font-size: 14px,
+        line-height: 25,
+        letter-spacing: -2,
+        color: #000000
+);
+
+//Текста
+
+$text-config: (
+        header: (
+                first-layer: (
+                        location: 'Ваш регион доставки:',
+                        shops: 'Магазины',
+                        help: 'Помощь',
+                        blog: 'Блог',
+                        free-delivery: 'Бесплатная доставка *',
+                        payment: 'Оплата при получении',
+                        purchase-returns: 'Возврат в течение 14 дней'
+                ),
+                second-layer: (
+                        men: 'Мужчинам',
+                        women: 'Женщинам',
+                        children: 'Детям',
+                        login: 'Войти',
+                        favorites: 'Избраное',
+                        basket: 'Корзина',
+                        search: 'Поиск'
+                ),
+                third-layer: (
+                        novelty: 'Новинки',
+                        snowboard: 'Сноуборд',
+                        skis: 'Лыжи',
+                        skate: 'Скейт',
+                        songboard: 'Лонгборд',
+                        sakeboard: 'Вейкборд',
+                        surf: 'Серф',
+                        sup: 'Sup',
+                        sloth: 'Одежда',
+                        shoes: 'Обувь',
+                        accessories: 'Аксессуары',
+                        brands: 'Бренды',
+                        sale: 'Распродажа'
+                )
+        )
+);

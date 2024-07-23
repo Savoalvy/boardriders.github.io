@@ -1,0 +1,58 @@
+@import './variables';
+
+@mixin apply-font($font-map) {
+  @each $property, $value in $font-map {
+    #{$property}: #{$value};
+  }
+}
+
+// Вспомогательная функция для глубокой выборки значений из карты
+@function map-get-deep($map, $keys...) {
+  @if length($keys) == 0 {
+    @return $map;
+  }
+
+  $key: nth($keys, 1);
+  $rest: if(length($keys) > 1, slice($keys, 2), ());
+
+  @if map-has-key($map, $key) {
+    @return map-get-deep(map-get($map, $key), $rest...);
+  }
+
+  @return null;
+}
+
+// Миксин для установки текстовых значений
+@mixin text-content($path...) {
+  $value: map-get-deep($text-config, $path);
+  content: '#{$value}';
+}
+
+// Позиционирование контента
+
+// Центрирование по вертикали/горизонтали
+
+@mixin center-flex($flex-direction: column) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: center; // Центрирование по вертикали
+  align-items: center;     // Центрирование по горизонтали
+}
+
+// Ширина контента
+
+@mixin content-width {
+  max-width: 1360px;
+  width: 100%;
+  height: 100%;
+}
+
+// Цвет бэкграунда
+
+@mixin background-color($color) {
+  background-color: map-get($colors, $color);
+}
+
+@mixin color($color) {
+  color: map-get($colors, $color);
+}
