@@ -56,3 +56,7 @@
 @mixin color($color) {
   color: map-get($colors, $color);
 }
+
+@mixin border-color($color) {
+  border-color: map-get($colors, $color);
+}

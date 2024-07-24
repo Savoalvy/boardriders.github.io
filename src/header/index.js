@@ -1,14 +1,18 @@
 import style from './style.module.scss';
-import Dropdown from '../components/selector/index';
+import Selector from '../components/selector/index';
 import IconLocation from '../components/img/header/location/index';
+import Navigation from '../components/navigation';
 
 function Header() {
   return (
     <div className={style.header}>
       <div className={style['first-layer']}>
         <div className={style['content-width']}>
-          <IconLocation />
-          <Dropdown />
+          <div className={style['city-wrapper']}>
+            <IconLocation />
+            <Selector />
+          </div>
+          <Navigation />
         </div>
       </div>
       <div className={style['second-layer']}>
