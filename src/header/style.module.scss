@@ -4,9 +4,14 @@
   width: 100%;
   max-height: 204px;
   height: 100%;
-  background-color: blueviolet;
 
   @include center-flex(column);
+
+  .content-width {
+    @include content-width;
+    @include center-flex(row);
+    justify-content: space-between;
+  }
 
   .first-layer,
   .second-layer,
@@ -22,10 +27,17 @@
     max-height: 50px;
 
     .city-wrapper {
-      max-width: 260px;
+      max-width: 275px;
       width: 100%;
       height: 100%;
       @include center-flex(row);
+      justify-content: space-between;
+    }
+
+    .icon-with-text-wrapper {
+      max-width: 700px;
+      width: 100%;
+      display: flex;
       justify-content: space-between;
     }
   }
@@ -38,10 +50,5 @@
   .third-layer {
     @include background-color(light-gray);
     max-height: 60px;
-  }
-
-  .content-width {
-    @include content-width;
-    @include center-flex(row);
   }
 }

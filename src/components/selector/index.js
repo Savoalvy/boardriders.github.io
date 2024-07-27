@@ -9,71 +9,50 @@ const Selector = () => {
   const [selectedValue, setSelectedValue] = useState(Text.header.selector.brest);
 
   // Состояние для управления видимостью меню
-  const [visible, setVisible] = useState(false);
+  const [open, setOpen] = useState(false);
 
   // Функция обработки клика на элемент меню
   const handleMenuClick = (e) => {
     const selectedItem = items.find((item) => item.key === e.key);
     if (selectedItem) {
-      setSelectedValue(selectedItem.label.props.children);
+      setSelectedValue(selectedItem.label);
     }
-    setVisible(false); // Закрыть меню после выбора
+    setOpen(false); // Закрыть меню после выбора
   };
 
-  // Функция обработки клика вне меню
-  const handleVisibleChange = (flag) => {
-    setVisible(flag);
+  // Функция обработки изменения состояния открытия меню
+  const handleOpenChange = (flag) => {
+    setOpen(flag);
   };
 
   // Создание элементов меню
   const items = [
-    {
-      label: <>{Text.header.selector.brest}</>,
-      key: '0'
-    },
-    {
-      label: <>{Text.header.selector.grodno}</>,
-      key: '1'
-    },
-    {
-      label: <>{Text.header.selector.vitebsk}</>,
-      key: '2'
-    },
-    {
-      label: <>{Text.header.selector.minsk}</>,
-      key: '3'
-    },
-    {
-      label: <>{Text.header.selector.mogilev}</>,
-      key: '4'
-    },
-    {
-      label: <>{Text.header.selector.grodno}</>,
-      key: '5'
-    }
+    { label: Text.header.selector.brest, key: '0' },
+    { label: Text.header.selector.grodno, key: '1' },
+    { label: Text.header.selector.vitebsk, key: '2' },
+    { label: Text.header.selector.minsk, key: '3' },
+    { label: Text.header.selector.mogilev, key: '4' },
+    { label: Text.header.selector.gomel, key: '5' }
   ];
 
+  // Создание меню
+  const menu = (
+    <Menu onClick={handleMenuClick}>
+      {items.map((item) => (
+        <Menu.Item key={item.key}>{item.label}</Menu.Item>
+      ))}
+    </Menu>
+  );
+
   return (
-    <Dropdown
-      overlay={
-        <Menu onClick={handleMenuClick}>
-          {items.map((item) => (
-            <Menu.Item key={item.key} icon={item.icon} disabled={item.disabled}>
-              {item.label}
-            </Menu.Item>
-          ))}
-        </Menu>
-      }
-      trigger={['click']}
-      visible={visible}
-      onVisibleChange={handleVisibleChange}>
+    <Dropdown overlay={menu} trigger={['click']} open={open} onOpenChange={handleOpenChange}>
       <a onClick={(e) => e.preventDefault()}>
         <Space>
           {`${Text.header.firstLayer.location} ${selectedValue}`}
           <DownOutlined
             style={{
               transition: 'transform 0.3s',
-              transform: visible ? 'rotate(180deg)' : 'rotate(0deg)'
+              transform: open ? 'rotate(180deg)' : 'rotate(0deg)'
             }}
           />
         </Space>
