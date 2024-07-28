@@ -1,10 +1,13 @@
+// src/config/text.js
 const text = {
   header: {
     firstLayer: {
       location: 'Ваш регион доставки:',
-      shops: 'Магазины',
-      help: 'Помощь',
-      blog: 'Блог',
+      navigation: {
+        shops: 'Магазины',
+        help: 'Помощь',
+        blog: 'Блог'
+      },
       freeDelivery: 'Бесплатная доставка *',
       payment: 'Оплата при получении',
       purchaseReturns: 'Возврат в течение 14 дней'
@@ -12,11 +15,7 @@ const text = {
     secondLayer: {
       men: 'Мужчинам',
       women: 'Женщинам',
-      children: 'Детям',
-      login: 'Войти',
-      favorites: 'Избраное',
-      basket: 'Корзина',
-      search: 'Поиск'
+      children: 'Детям'
     },
     thirdLayer: {
       novelty: 'Новинки',
@@ -27,7 +26,7 @@ const text = {
       sakeboard: 'Вейкборд',
       surf: 'Серф',
       sup: 'Sup',
-      sloth: 'Одежда',
+      cloth: 'Одежда',
       shoes: 'Обувь',
       accessories: 'Аксессуары',
       brands: 'Бренды',
@@ -42,6 +41,18 @@ const text = {
       gomel: 'Гомель'
     }
   }
+};
+
+// Рекурсивная функция для маппинга текста
+export const mapText = (textLayer) => {
+  if (!textLayer || typeof textLayer !== 'object') return []; // Защита от null, undefined и не-объектов
+
+  return Object.values(textLayer).flatMap((value) => {
+    if (typeof value === 'object' && !Array.isArray(value)) {
+      return mapText(value); // Рекурсивно обрабатываем вложенные объекты
+    }
+    return { text: value, href: '#' }; // Для простых значений
+  });
 };
 
 export default text;

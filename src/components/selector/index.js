@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Menu, Space } from 'antd';
-import Text from '../../config/text';
+import Text, { mapText } from '../../config/text';
 import './style.module.scss'; // Подключите файл стилей, если он существует
 
 const Selector = () => {
@@ -11,11 +11,15 @@ const Selector = () => {
   // Состояние для управления видимостью меню
   const [open, setOpen] = useState(false);
 
+  // Использование mapText для создания элементов меню
+  const items = mapText(Text.header.selector);
+
   // Функция обработки клика на элемент меню
   const handleMenuClick = (e) => {
-    const selectedItem = items.find((item) => item.key === e.key);
+    // Использование `text` как ключа для поиска выбранного элемента
+    const selectedItem = items.find((item) => item.text === e.key);
     if (selectedItem) {
-      setSelectedValue(selectedItem.label);
+      setSelectedValue(selectedItem.text);
     }
     setOpen(false); // Закрыть меню после выбора
   };
@@ -25,21 +29,11 @@ const Selector = () => {
     setOpen(flag);
   };
 
-  // Создание элементов меню
-  const items = [
-    { label: Text.header.selector.brest, key: '0' },
-    { label: Text.header.selector.grodno, key: '1' },
-    { label: Text.header.selector.vitebsk, key: '2' },
-    { label: Text.header.selector.minsk, key: '3' },
-    { label: Text.header.selector.mogilev, key: '4' },
-    { label: Text.header.selector.gomel, key: '5' }
-  ];
-
   // Создание меню
   const menu = (
     <Menu onClick={handleMenuClick}>
       {items.map((item) => (
-        <Menu.Item key={item.key}>{item.label}</Menu.Item>
+        <Menu.Item key={item.text}>{item.text}</Menu.Item>
       ))}
     </Menu>
   );

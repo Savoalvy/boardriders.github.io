@@ -45,6 +45,14 @@
   .second-layer {
     @include background-color(white);
     max-height: 94px;
+
+    .icons-wrapper {
+      @include center-flex(row);
+      justify-content: space-between;
+      max-width: 250px;
+      width: 100%;
+    }
+
   }
 
   .third-layer {
