@@ -4,7 +4,6 @@
   width: 100%;
   max-height: 204px;
   height: 100%;
-
   @include center-flex(column);
 
   .content-width {
@@ -52,11 +51,37 @@
       max-width: 250px;
       width: 100%;
     }
-
   }
 
   .third-layer {
     @include background-color(light-gray);
     max-height: 60px;
   }
+}
+
+.nav-first-layer {
+  max-width: 205px;
+}
+
+.nav-link-first:hover {
+  @include color(dark-Gray); /* Изменение цвета при наведении */
+  transition: 0.3s;
+}
+
+.nav-second-layer {
+  max-width: 254px;
+}
+
+.nav-link-second:hover {
+  @include color(red); /* Изменение цвета при наведении */
+  transition: 0.3s;
+}
+
+.nav-third-layer {
+  max-width: 1066px;
+}
+
+.nav-link-third:hover {
+  @include color(red); /* Изменение цвета при наведении */
+  transition: 0.3s;
 }

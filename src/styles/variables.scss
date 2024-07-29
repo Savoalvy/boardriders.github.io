@@ -65,4 +65,10 @@ $font-H4-Capital: (
         color: #000000
 );
 
-//Текста
+$Caption-12-medium: (
+        font-family: Gtrsk Peta,
+        font-style: 'normal',
+        font-size: 12px,
+        line-height: 20,
+        letter-spacing: -2px
+);

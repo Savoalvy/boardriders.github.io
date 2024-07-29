@@ -1,9 +1,8 @@
-// src/header/index.js
 import React from 'react';
+import Navigation from '../components/navigation';
 import style from './style.module.scss';
 import Selector from '../components/selector/index';
 import IconLocation from '../components/img/header/location/index';
-import Navigation from '../components/navigation';
 import FreeDeliveryIcon from '../components/img/header/freeDelivery';
 import PaymentIcon from '../components/img/header/payment';
 import PurchaseReturnsIcon from '../components/img/header/purchaseReturns';
@@ -28,7 +27,11 @@ function Header() {
             <IconLocation />
             <Selector />
           </div>
-          <Navigation links={firstLayerNavigation} />
+          <Navigation
+            links={firstLayerNavigation}
+            navClassName={style['nav-first-layer']}
+            navLinkClassName={style['nav-link-first']}
+          />
           <div className={style['icon-with-text-wrapper']}>
             <IconWithText
               SvgComponent={FreeDeliveryIcon}
@@ -44,7 +47,11 @@ function Header() {
       </div>
       <div className={style['second-layer']}>
         <div className={style['content-width']}>
-          <Navigation links={secondLayer} />
+          <Navigation
+            links={secondLayer}
+            navClassName={style['nav-second-layer']}
+            navLinkClassName={style['nav-link-second']}
+          />
           <IconLogo />
           <div className={style['icons-wrapper']}>
             <IconLogin />
@@ -56,7 +63,11 @@ function Header() {
       </div>
       <div className={style['third-layer']}>
         <div className={style['content-width']}>
-          <Navigation links={thirdLayer} />
+          <Navigation
+            links={thirdLayer}
+            navClassName={style['nav-third-layer']}
+            navLinkClassName={style['nav-link-third']}
+          />
         </div>
       </div>
     </div>

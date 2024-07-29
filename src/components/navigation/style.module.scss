@@ -1,8 +1,8 @@
 @import '../../styles/mixins';
 
+// Основные стили для всех уровней
 .nav {
   @include center-flex(row);
-  max-width: 205px;
   width: 100%;
   height: 100%;
 }
@@ -13,7 +13,6 @@
   padding: 0;
   @include center-flex(row);
   justify-content: space-between;
-  max-width: inherit;
   width: inherit;
   height: inherit;
 }
@@ -21,9 +20,9 @@
 .nav-link {
   color: inherit;
   text-decoration: none; /* Убираем подчеркивание ссылок */
-}
 
-.nav-link:hover {
-  @include color(dark-Gray); /* Изменение цвета при наведении */
-  transition: 0.3s;
+  &:hover {
+    @include color(dark-Gray); /* Изменение цвета при наведении */
+    transition: 0.3s;
+  }
 }

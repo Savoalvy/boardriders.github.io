@@ -1,20 +1,14 @@
-// src/components/navigation/index.js
 import React from 'react';
 import style from './style.module.scss'; // Подключите файл стилей
 
-const Navigation = ({ links = [] }) => {
-  // Дефолтное значение пустого массива
-  if (!Array.isArray(links)) {
-    console.error('Invalid links prop:', links);
-    return null; // Возвращаем null, если links не массив
-  }
-
+const Navigation = ({ links, navClassName, navLinkClassName }) => {
+  console.log('ClassName:', navClassName); // Для отладки
   return (
-    <nav className={style['nav']}>
+    <nav className={`${style.nav} ${navClassName}`}>
       <ul className={style['nav-list']}>
         {links.map((link, index) => (
           <li key={index}>
-            <a href={link.href} className={style['nav-link']}>
+            <a href={link.href} className={`${style['nav-link']} ${navLinkClassName}`}>
               {link.text}
             </a>
           </li>
