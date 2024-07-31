@@ -1,0 +1,27 @@
+.button {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  font: inherit;
+  padding: 0;
+  border: none;
+  background: none;
+  line-height: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  svg path {
+    transition: fill 0.3s;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    svg path {
+      fill: #828b8d;
+      transition: fill 0.3s;
+    }
+  }
+}

@@ -4,7 +4,7 @@ const IconLogo = () => (
   <svg
     width="243"
     height="50"
-    viewBox="0 0 243 50"
+    viewBox="0 0 241 50"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink">

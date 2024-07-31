@@ -13,6 +13,7 @@ import IconLogin from '../components/img/header/login';
 import IconBasket from '../components/img/header/basket';
 import IconSearch from '../components/img/header/search';
 import Text, { mapText } from '../config/text';
+import Button from '../components/button/index';
 
 function Header() {
   const firstLayerNavigation = mapText(Text.header.firstLayer.navigation);
@@ -54,10 +55,10 @@ function Header() {
           />
           <IconLogo />
           <div className={style['icons-wrapper']}>
-            <IconLogin />
-            <IconFavourites />
-            <IconBasket />
-            <IconSearch />
+            <Button svg={IconLogin} />
+            <Button svg={IconFavourites} />
+            <Button svg={IconBasket} />
+            <Button svg={IconSearch} />
           </div>
         </div>
       </div>

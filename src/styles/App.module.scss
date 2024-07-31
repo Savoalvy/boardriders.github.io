@@ -1,8 +1,10 @@
 @import '../styles/mixins';
 @import 'global';
+@import 'fonts';
 
 .App {
   width: 100vw;
   height: 100vh;
   @include center-flex(column);
+  font-family: 'Gtrsk Peta', sans-serif;
 }

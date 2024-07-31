@@ -20,9 +20,4 @@
 .nav-link {
   color: inherit;
   text-decoration: none; /* Убираем подчеркивание ссылок */
-
-  &:hover {
-    @include color(dark-Gray); /* Изменение цвета при наведении */
-    transition: 0.3s;
-  }
 }
