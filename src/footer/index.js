@@ -5,6 +5,7 @@ function Footer() {
   return (
     <div className={style.footer}>
       <IconBackground />
+      <div className={style.container}>1</div>
     </div>
   );
 }
