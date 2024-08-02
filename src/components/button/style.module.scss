@@ -1,7 +1,8 @@
 .button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  text-align: center;
   font: inherit;
   padding: 0;
   border: none;
