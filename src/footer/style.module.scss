@@ -69,6 +69,37 @@
       height: 100%;
       border-bottom: 1px solid #ffffff33;
       border-top: 1px solid #ffffff33;
+
+      .item {
+        border: 1px solid white;
+      }
+
+      .footerNavigation {
+        display: flex;
+        max-width: 600px;
+        width: 100%;
+        height: inherit;
+
+        .helpWrapper {
+          flex-direction: column;
+          align-items: flex-start;
+
+          //&li:first-child {
+          //  color: black;
+          //}
+
+        }
+
+        .companyWrapper {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .incWrapper {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
     }
   }
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import style from './style.module.scss'; // Подключите файл стилей
 
-const Navigation = ({ links, navClassName, navLinkClassName }) => {
+const Navigation = ({ links, navClassName, navLinkClassName, ulClassName }) => {
   console.log('ClassName:', navClassName); // Для отладки
   return (
     <nav className={`${style.nav} ${navClassName}`}>
-      <ul className={style['nav-list']}>
+      <ul className={`${style['nav-list']} ${ulClassName}`}>
         {links.map((link, index) => (
           <li key={index}>
             <a href={link.href} className={`${style['nav-link']} ${navLinkClassName}`}>

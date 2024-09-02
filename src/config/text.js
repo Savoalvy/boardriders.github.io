@@ -40,6 +40,39 @@ const text = {
       vitebsk: 'Витебск',
       gomel: 'Гомель'
     }
+  },
+  footer: {
+    referal: 'Подпишись на рассылку и получи скидку',
+    app: 'Доступ к ранним релизам в приложении',
+    contact: 'Контакты',
+    phone: '8 (800) 511-74-68',
+    phoneText: 'Бесплатная горячая линия Ежедневно с 9 до 21',
+    email: 'Контактный Email',
+    emailText: 'info@brd.ru',
+    help: {
+      help: 'Помощь',
+      delivery: 'Доставка',
+      payment: 'Оплата',
+      refund: 'Возврат',
+      reviews: 'Отзывы (2290)',
+      discount: 'Акции и скидки'
+    },
+    company: {
+      company: 'Конпания',
+      contacts: 'Контакты',
+      boardriders: 'О boardriders',
+      vacancy: 'Вакансии',
+      offer: 'Публичная офферта'
+    },
+    inc: {
+      inc: 'Boardriders inc.',
+      franchising: 'Франчайзинг',
+      quiksilver: 'Quiksilver',
+      roxy: 'Roxy',
+      dc: 'DC Shoes',
+      club: 'Boardriders Club'
+    },
+    right: '© 2020 Brd.ru. Все права защищены'
   }
 };
 

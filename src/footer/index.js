@@ -5,8 +5,13 @@ import FooterLogo from '../components/img/footer/logo/footerLogo.png';
 import Button from '../components/button/index';
 import IconTelegram from '../components/img/footer/telegram';
 import IconMail from '../components/img/footer/mail';
+import Navigation from '../components/navigation';
+import Text, { mapText } from '../config/text';
 
 function Footer() {
+  const help = mapText(Text.footer.help);
+  const company = mapText(Text.footer.company);
+  const inc = mapText(Text.footer.inc);
   return (
     <div className={style.footer}>
       <IconBackground />
@@ -23,7 +28,15 @@ function Footer() {
             <Button svg={IconTelegram} />
           </div>
         </div>
-        <div className={`${style.wrapper} ${style.content}`}></div>
+        <div className={`${style.wrapper} ${style.content}`}>
+          <div className={style.item}>1</div>
+          <div className={style.item}>1</div>
+          <div className={style.footerNavigation}>
+            <Navigation links={help} ulClassName={style.helpWrapper} />
+            <Navigation links={company} ulClassName={style.companyWrapper} />
+            <Navigation links={inc} ulClassName={style.incWrapper} />
+          </div>
+        </div>
         <div className={style.wrapper}>1</div>
       </div>
     </div>
