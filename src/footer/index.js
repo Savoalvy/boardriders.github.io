@@ -7,6 +7,9 @@ import IconTelegram from '../components/img/footer/telegram';
 import IconMail from '../components/img/footer/mail';
 import Navigation from '../components/navigation';
 import Text, { mapText } from '../config/text';
+import IconStore from '../components/img/footer/store';
+import IconMarket from '../components/img/footer/market';
+import IconQr from '../components/img/footer/qr';
 
 function Footer() {
   const help = mapText(Text.footer.help);
@@ -29,7 +32,16 @@ function Footer() {
           </div>
         </div>
         <div className={`${style.wrapper} ${style.content}`}>
-          <div className={style.item}>1</div>
+          <div className={style.item}>
+            <div className={style.ite1}>Доступ к ранним релизам в приложении</div>
+            <div className={style.ite}>
+              <div className={style.storeWrapper}>
+                <IconStore />
+                <IconMarket />
+              </div>
+              <IconQr />
+            </div>
+          </div>
           <div className={style.item}>1</div>
           <div className={style.footerNavigation}>
             <Navigation links={help} ulClassName={style.helpWrapper} />
