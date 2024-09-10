@@ -10,6 +10,7 @@ import Text, { mapText } from '../config/text';
 import IconStore from '../components/img/footer/store';
 import IconMarket from '../components/img/footer/market';
 import IconQr from '../components/img/footer/qr';
+import IconTelephone from '../components/img/footer/telephone';
 
 function Footer() {
   const help = mapText(Text.footer.help);
@@ -42,7 +43,26 @@ function Footer() {
               <IconQr />
             </div>
           </div>
-          <div className={style.item}>1</div>
+          <div className={`${style.content} ${style.item}`}>
+            <span className={style.text1}>Контакты</span>
+            <div className={style.wrapperItem1}>
+              <div className={style.wrapperIconTel}>
+                <IconTelephone />
+              </div>
+              <span>8 (800) 511-74-68 </span>
+              <span>Бесплатная горячая линия Ежедневно с 9 до 21</span>
+            </div>
+
+            <div className={style.wrapperItem2}>
+              <div>
+                <div className={style.wrapperIconTg}>
+                  <IconTelegram />
+                </div>
+                <span>Контактный Email</span>
+                <span>info@brd.ru</span>
+              </div>
+            </div>
+          </div>
           <div className={style.footerNavigation}>
             <Navigation links={help} ulClassName={style.helpWrapper} />
             <Navigation links={company} ulClassName={style.companyWrapper} />
