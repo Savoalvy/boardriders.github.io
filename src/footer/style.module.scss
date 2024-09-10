@@ -9,7 +9,7 @@
   @include center-flex(row);
   color: white;
 
-  .container {
+  &__container {
     position: absolute;
     max-width: 1360px;
     width: 100%;
@@ -19,106 +19,107 @@
     justify-content: space-between;
     margin-top: 100px;
     border: 1px solid white;
+  }
 
-    .wrapper {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    width: 100%;
+    max-height: 280px;
+    height: 100%;
+    border-bottom: 1px solid #ffffff33;
+    border-top: 1px solid #ffffff33;
+  }
+
+  &__logo {
+    max-width: 280px;
+    width: 100%;
+    max-height: 70px;
+    height: 100%;
+
+    &--image {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__newsletter-discount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 667px;
+    width: 100%;
+    max-height: 48px;
+    height: 100%;
+    border: 1px solid white;
+  }
+
+  &__newsletter-discount-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 430px;
+    width: 100%;
+  }
+
+  &__newsletter-discount-percent {
+    color: red;
+  }
+
+  &__item {
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__item-description {
+
+  }
+
+  &__item-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__store-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .footerNavigation {
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+
+    .helpWrapper {
+      flex-direction: column;
+      align-items: flex-start;
+
+      //&li:first-child {
+      //  color: black;
+      //}
     }
 
-    .logoWrapper {
-      max-width: 280px;
-      width: 100%;
-      max-height: 70px;
-      height: 100%;
-
-      .logo {
-        width: inherit;
-        height: inherit;
-      }
+    .companyWrapper {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
-    .discount {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 667px;
-      width: 100%;
-      max-height: 48px;
-      height: 100%;
-      border: 1px solid white;
-
-      .percentWrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 430px;
-        width: 100%;
-      }
-
-      .percent {
-        color: red;
-      }
-
-    }
-
-    .content {
-      width: 100%;
-      max-height: 280px;
-      height: 100%;
-      border-bottom: 1px solid #ffffff33;
-      border-top: 1px solid #ffffff33;
-
-      .item {
-        border: 1px solid white;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-
-        .ite {
-          display: flex;
-          justify-content: space-between;
-          width: 100%;
-        }
-
-        .storeWrapper {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-
-      }
-
-      .footerNavigation {
-        display: flex;
-        max-width: 600px;
-        width: 100%;
-        height: inherit;
-
-        .helpWrapper {
-          flex-direction: column;
-          align-items: flex-start;
-
-          //&li:first-child {
-          //  color: black;
-          //}
-
-        }
-
-        .companyWrapper {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .incWrapper {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-      }
+    .incWrapper {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 }

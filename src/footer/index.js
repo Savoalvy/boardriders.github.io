@@ -11,39 +11,46 @@ import IconStore from '../components/img/footer/store';
 import IconMarket from '../components/img/footer/market';
 import IconQr from '../components/img/footer/qr';
 import IconTelephone from '../components/img/footer/telephone';
+import classNames from 'classnames';
 
 function Footer() {
   const help = mapText(Text.footer.help);
   const company = mapText(Text.footer.company);
   const inc = mapText(Text.footer.inc);
+  const combinedWrapperContent = classNames(style.footer__wrapper, style.footer__content);
+  const combinedContentItem = classNames(style.footer__content, style.footer__item);
   return (
-    <div className={style.footer}>
+    <footer className={style['footer']}>
       <IconBackground />
-      <div className={style.container}>
-        <div className={style.wrapper}>
-          <div className={style.logoWrapper}>
-            <img src={FooterLogo} alt="Discount" className={style.logo} />
+      <div className={style['footer__container']}>
+        <div className={style['footer__wrapper']}>
+          <div className={style['footer__logo']}>
+            <img src={FooterLogo} alt="Discount" className={style['footer__logo--image']} />
           </div>
-          <div className={style.discount}>
-            <span className={style.percentWrapper}>
+          <div className={style['footer__newsletter-discount']}>
+            <div className={style['footer__newsletter-discount-content']}>
               <IconMail />
-              Подпишись на рассылку и получи <span className={style.percent}>-10%</span> скидку
-            </span>
+              <span>Подпишись на рассылку и получи</span>
+              <span className={style['footer__newsletter-discount-percent']}>-10%</span>
+              <span>cкидку</span>
+            </div>
             <Button svg={IconTelegram} />
           </div>
         </div>
-        <div className={`${style.wrapper} ${style.content}`}>
-          <div className={style.item}>
-            <div className={style.ite1}>Доступ к ранним релизам в приложении</div>
-            <div className={style.ite}>
-              <div className={style.storeWrapper}>
+        <div className={combinedWrapperContent}>
+          <div className={style['footer__item']}>
+            <div className={style['footer__item-description']}>
+              Доступ к ранним релизам в приложении
+            </div>
+            <div className={style['footer__item-icons']}>
+              <div className={style['footer__store-icons']}>
                 <IconStore />
                 <IconMarket />
               </div>
               <IconQr />
             </div>
           </div>
-          <div className={`${style.content} ${style.item}`}>
+          <div className={combinedContentItem}>
             <span className={style.text1}>Контакты</span>
             <div className={style.wrapperItem1}>
               <div className={style.wrapperIconTel}>
@@ -69,9 +76,9 @@ function Footer() {
             <Navigation links={inc} ulClassName={style.incWrapper} />
           </div>
         </div>
-        <div className={style.wrapper}>1</div>
+        <div className={style['footer__wrapper']}>1</div>
       </div>
-    </div>
+    </footer>
   );
 }
 
