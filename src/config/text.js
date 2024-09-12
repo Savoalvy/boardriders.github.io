@@ -42,13 +42,17 @@ const text = {
     }
   },
   footer: {
-    referal: 'Подпишись на рассылку и получи скидку',
-    app: 'Доступ к ранним релизам в приложении',
-    contact: 'Контакты',
-    phone: '8 (800) 511-74-68',
-    phoneText: 'Бесплатная горячая линия Ежедневно с 9 до 21',
-    email: 'Контактный Email',
-    emailText: 'info@brd.ru',
+    other: {
+      referal: 'Подпишись на рассылку и получи',
+      referalDiscount: 'скидку',
+      app: 'Доступ к ранним релизам в приложении',
+      contact: 'Контакты',
+      phone: '+375 (29) 242-09-57',
+      phoneText: 'Бесплатная горячая линия Ежедневно с 9 до 21',
+      email: 'Контактный Email',
+      emailText: 'info@brd.ru',
+      right: '© 2020 Brd.ru. Все права защищены'
+    },
     help: {
       help: 'Помощь',
       delivery: 'Доставка',
@@ -72,7 +76,13 @@ const text = {
       dc: 'DC Shoes',
       club: 'Boardriders Club'
     },
-    right: '© 2020 Brd.ru. Все права защищены'
+    socialLinks: {
+      twitter: 'https://twitter.com',
+      facebook: 'https://facebook.com',
+      twitch: 'https://twitch.tv',
+      youtube: 'https://youtube.com',
+      instagram: 'https://instagram.com'
+    }
   }
 };
 

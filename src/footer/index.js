@@ -12,6 +12,7 @@ import IconMarket from '../components/img/footer/market';
 import IconQr from '../components/img/footer/qr';
 import IconTelephone from '../components/img/footer/telephone';
 import classNames from 'classnames';
+import FooterSocial from './footer__social';
 
 function Footer() {
   const help = mapText(Text.footer.help);
@@ -29,51 +30,51 @@ function Footer() {
           <div className={style['footer__newsletter-discount']}>
             <div className={style['footer__newsletter-discount-content']}>
               <IconMail />
-              <span>Подпишись на рассылку и получи</span>
+              <span>{Text.footer.other.referal}</span>
               <span className={style['footer__newsletter-discount-percent']}>-10%</span>
-              <span>cкидку</span>
+              <span>{Text.footer.other.referalDiscount}</span>
             </div>
             <Button svg={IconTelegram} />
           </div>
         </div>
         <div className={combinedWrapperContent}>
           <div className={style['footer__app']}>
-            <div className={style['footer__app-description']}>
-              Доступ к ранним релизам в приложении
-            </div>
+            <div className={style['footer__app-description']}>{Text.footer.other.app}</div>
             <div className={style['footer__app-icons']}>
               <div className={style['footer__store-icons']}>
-                <IconStore />
-                <IconMarket />
+                <Button svg={IconStore} />
+                <Button svg={IconMarket} />
               </div>
               <IconQr />
             </div>
           </div>
           <div className={style['footer__contacts-wrapper']}>
-            <span className={style['footer__contacts--style']}>Контакты</span>
+            <span className={style['footer__contacts-font']}>{Text.footer.other.contact}</span>
             <div className={style['footer__contacts']}>
               <div className={style['footer__contacts-icons']}>
                 <IconTelephone />
               </div>
               <div className={style['footer__contacts-description']}>
                 <span className={style['footer__contacts-description--main-text']}>
-                  8 (800) 511-74-68
+                  <a href="tel:+375292420957p">{Text.footer.other.phone}</a>
                 </span>
                 <span className={style['footer__contacts-description--text']}>
-                  Бесплатная горячая линия Ежедневно с 9 до 21
+                  {Text.footer.other.phoneText}
                 </span>
               </div>
             </div>
 
             <div className={style['footer__contacts']}>
               <div className={style['footer__contacts-icons']}>
-                <IconTelegram />
+                <IconMail />
               </div>
               <div className={style['footer__contacts-description']}>
                 <span className={style['footer__contacts-description--main-text']}>
-                  Контактный Email
+                  {Text.footer.other.email}
                 </span>
-                <span className={style['footer__contacts-description--text']}>info@brd.ru</span>
+                <span className={style['footer__contacts-description--text']}>
+                  {Text.footer.other.emailText}
+                </span>
               </div>
             </div>
           </div>
@@ -83,7 +84,10 @@ function Footer() {
             <Navigation links={inc} ulClassName={style['footer__navigation-column']} />
           </div>
         </div>
-        <div className={style['footer__wrapper']}>1</div>
+        <div className={style['footer__wrapper']}>
+          <FooterSocial />
+          <span className={style['footer__copyright']}>{Text.footer.other.right}</span>
+        </div>
       </div>
     </footer>
   );
