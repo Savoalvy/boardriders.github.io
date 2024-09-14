@@ -12,7 +12,7 @@ import IconMarket from '../components/img/footer/market';
 import IconQr from '../components/img/footer/qr';
 import IconTelephone from '../components/img/footer/telephone';
 import classNames from 'classnames';
-import FooterSocial from './footer__social';
+import Footer__social from './footer__social';
 
 function Footer() {
   const help = mapText(Text.footer.help);
@@ -41,7 +41,7 @@ function Footer() {
           <div className={style['footer__app']}>
             <div className={style['footer__app-description']}>{Text.footer.other.app}</div>
             <div className={style['footer__app-icons']}>
-              <div className={style['footer__store-icons']}>
+              <div className={style['footer__app-icons-store']}>
                 <Button svg={IconStore} />
                 <Button svg={IconMarket} />
               </div>
@@ -56,7 +56,7 @@ function Footer() {
               </div>
               <div className={style['footer__contacts-description']}>
                 <span className={style['footer__contacts-description--main-text']}>
-                  <a href="tel:+375292420957p">{Text.footer.other.phone}</a>
+                  <a href="tel:+375292420957">{Text.footer.other.phone}</a>
                 </span>
                 <span className={style['footer__contacts-description--text']}>
                   {Text.footer.other.phoneText}
@@ -85,7 +85,7 @@ function Footer() {
           </div>
         </div>
         <div className={style['footer__wrapper']}>
-          <FooterSocial />
+          <Footer__social />
           <span className={style['footer__copyright']}>{Text.footer.other.right}</span>
         </div>
       </div>

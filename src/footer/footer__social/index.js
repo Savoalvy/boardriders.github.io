@@ -35,7 +35,7 @@ const socialItems = [
   }
 ];
 
-const FooterSocial = () => (
+const Footer__social = () => (
   <div className={style['footer__social']}>
     {socialItems.map(({ name, Icon, href, ariaLabel }) => (
       <a key={name} href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel}>
@@ -45,4 +45,4 @@ const FooterSocial = () => (
   </div>
 );
 
-export default FooterSocial;
+export default Footer__social;
