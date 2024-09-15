@@ -1,0 +1,36 @@
+@import '../../styles/mixins';
+
+.slider {
+  margin: 15px 0;
+
+  &__slide {
+    position: relative;
+
+    &--image {
+      display: block;
+      max-height: 480px;
+      height: 100%;
+      width: 100%;
+      border: none;
+    }
+
+    &--description {
+      position: absolute;
+      bottom: 76px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      @include background-color(black);
+      @include color(white);
+      max-width: 600px;
+      width: fit-content;
+      max-height: 76px;
+      height: 100%;
+      padding: 0 30px;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 57.6px;
+    }
+  }
+}
