@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'antd';
 import style from './style.module.scss';
-import image from '../img/content/slider__img/slider__icon.jpg';
+import image from '../img/content/content-slider__img/slider__icon.jpg';
 import Slide from './carousel__slide';
 
 const Slider = () => (

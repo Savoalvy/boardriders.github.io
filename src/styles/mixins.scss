@@ -41,12 +41,6 @@
 
 // Ширина контента
 
-@mixin content-width {
-  max-width: 1360px;
-  width: 100%;
-  height: 100%;
-}
-
 // Цвет бэкграунда
 
 @mixin background-color($color) {

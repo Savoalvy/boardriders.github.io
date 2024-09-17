@@ -10,6 +10,9 @@ import img_6 from '../components/img/content/content__brand-img/img_6.png';
 import img_7 from '../components/img/content/content__brand-img/img_7.png';
 import img_8 from '../components/img/content/content__brand-img/img_8.png';
 import img_9 from '../components/img/content/content__brand-img/img_9.png';
+import Snowboard from '../components/img/content/content-discount__image/discount-image-snowboard.png';
+import Flowboard from '../components/img/content/content-discount__image/discount-image-flowboard.png';
+import Discount from '../content/discount/index';
 
 function Content() {
   return (
@@ -56,6 +59,15 @@ function Content() {
           <img src={img_9} alt={'Картинка'} />
         </div>
       </div>
+      <div className={style['content-discount']}>
+        <Discount image={Snowboard} description={'Название акции №1'} />
+        <Discount image={Flowboard} description={'Название акции №1'} />
+      </div>
+      <div className={style['blok']}>Новинки</div>
+      <div className={style['blok']}>Еще акция</div>
+      <div className={style['blok']}>Популярные коллекции</div>
+      <div className={style['blok']}>Акции</div>
+      <div className={style['blok']}>Популярные коллекции</div>
     </div>
   );
 }

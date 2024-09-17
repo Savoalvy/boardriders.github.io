@@ -3,7 +3,7 @@ import React from 'react';
 const IconBackground = () => (
   <svg
     width="100%"
-    height="100%"
+    height="600px"
     viewBox="0 0 1680 642"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
