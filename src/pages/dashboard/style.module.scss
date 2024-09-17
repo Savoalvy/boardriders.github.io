@@ -1,0 +1,12 @@
+@import '../../styles/mixins';
+
+
+.dashboard {
+  @include center-flex(column);
+
+  > a {
+    text-decoration: none;
+    color: white;
+  }
+
+}

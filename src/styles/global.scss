@@ -1,7 +1,5 @@
 @import "fonts";
 
-
-
 *,
 *::before,
 *::after {
@@ -17,4 +15,17 @@
 *img {
   width: 100%;
   height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Gtrsk Peta', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100vh;
 }

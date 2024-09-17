@@ -18,7 +18,6 @@ function Footer() {
   const help = mapText(Text.footer.help);
   const company = mapText(Text.footer.company);
   const inc = mapText(Text.footer.inc);
-  const combinedWrapperContent = classNames(style.footer__wrapper, style.footer__content);
   return (
     <footer className={style['footer']}>
       <IconBackground />
@@ -37,7 +36,7 @@ function Footer() {
             <Button svg={IconTelegram} />
           </div>
         </div>
-        <div className={combinedWrapperContent}>
+        <div className={classNames(style.footer__wrapper, style.footer__content)}>
           <div className={style['footer__app']}>
             <div className={style['footer__app-description']}>{Text.footer.other.app}</div>
             <div className={style['footer__app-icons']}>

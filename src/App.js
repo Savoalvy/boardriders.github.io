@@ -1,16 +1,14 @@
-import React from 'react';
-import Header from './header/index';
-import styles from './styles/App.module.scss';
-import Footer from './footer/index';
-import Content from './content';
+import './styles/global.scss';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Dashboard from './pages/dashboard';
 
 function App() {
   return (
-    <div className={styles.App}>
-      <Header />
-      <Content />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 }
 
