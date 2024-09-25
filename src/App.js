@@ -1,6 +1,6 @@
 import './styles/global.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Dashboard from './pages/dashboard';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
