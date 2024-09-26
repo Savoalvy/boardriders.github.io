@@ -2,7 +2,7 @@ import React from 'react';
 import style from './style.module.scss';
 import IconBackground from '../../../assets/icons/Background';
 import FooterLogo from '../../../assets/img/footerLogo.png';
-import Button from '../../common/Button';
+import Button from '../../common/ButtonSVG';
 import IconTelegram from '../../../assets/icons/Telegram';
 import IconMail from '../../../assets/icons/Mail';
 import Navigation from '../../common/Navigation';
@@ -27,11 +27,11 @@ function Footer() {
           <div className={style['footer__logo']}>
             <img src={FooterLogo} alt="Discount" className={style['footer__logo--image']} />
           </div>
-          <div className={style['footer__newsletter-Discount']}>
-            <div className={style['footer__newsletter-Discount-content']}>
+          <div className={style['footer__newsletter-discount']}>
+            <div className={style['footer__newsletter-discount-content']}>
               <IconMail />
               <span>Подпишись на рассылку и получи</span>
-              <span className={style['footer__newsletter-Discount-percent']}>-10%</span>
+              <span className={style['footer__newsletter-discount-percent']}>-10%</span>
               <span>скидку</span>
             </div>
             <Button svg={IconTelegram} />
@@ -43,7 +43,7 @@ function Footer() {
               Доступ к ранним релизам в приложении
             </div>
             <div className={style['footer__app-icons']}>
-              <div className={style['footer__app-icons-Store']}>
+              <div className={style['footer__app-icons-store']}>
                 <Button svg={IconStore} />
                 <Button svg={IconMarket} />
               </div>

@@ -12,7 +12,7 @@ import IconFavourites from '../../../assets/icons/Favourites';
 import IconLogin from '../../../assets/icons/Login';
 import IconBasket from '../../../assets/icons/Basket';
 import IconSearch from '../../../assets/icons/Search';
-import Button from '../../common/Button';
+import Button from '../../common/ButtonSVG';
 import { navigationUpperLayer, navigationMiddleLayer, navigationUnderLayer } from './config';
 
 function Header() {

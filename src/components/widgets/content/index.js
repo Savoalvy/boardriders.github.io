@@ -4,6 +4,7 @@ import Snowboard from '../../../assets/img/discount-image-snowboard.png';
 import Flowboard from '../../../assets/img/discount-image-flowboard.png';
 import Discount from './Discount';
 import { ITEMS } from './config';
+import ButtonDefault from '../../common/ButtonDefault';
 
 function Content() {
   return (
@@ -21,6 +22,11 @@ function Content() {
       <div className={style['content-discount']}>
         <Discount image={Snowboard} description={'Название акции №1'} />
         <Discount image={Flowboard} description={'Название акции №1'} />
+      </div>
+      <div className={style['content-new']}>
+        <span>Новинки</span>
+        <div>slider</div>
+        <ButtonDefault text={'Показать больше'} styles={style['btnMore']} />
       </div>
     </div>
   );
