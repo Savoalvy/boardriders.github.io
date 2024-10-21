@@ -1,9 +1,9 @@
 import React from 'react';
 import style from './style.module.scss';
 
-const Button = ({ svg: SvgComponent }) => {
+const Button = ({ svg: SvgComponent, className }) => {
   return (
-    <button className={style.button}>
+    <button className={`${style['button']} ${className}`}>
       <SvgComponent />
     </button>
   );

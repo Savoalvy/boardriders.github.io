@@ -5,7 +5,7 @@ import Flowboard from '../../../assets/img/discount-image-flowboard.png';
 import Discount from './Discount';
 import { ITEMS } from './config';
 import ButtonDefault from '../../common/ButtonDefault';
-import SliderProduct from './customSliderProduct';
+import SliderSwiper from './SwiperSlider';
 
 function Content() {
   return (
@@ -26,7 +26,7 @@ function Content() {
       </div>
       <div className={style['content-new']}>
         <span className={style['content-new__heading']}>Новинки</span>
-        <SliderProduct />
+        <SliderSwiper />
         <ButtonDefault text={'Показать больше'} styles={style['content__btnMore']} />
       </div>
     </div>

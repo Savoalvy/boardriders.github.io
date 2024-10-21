@@ -2,22 +2,21 @@
 
 // Основные стили для всех уровней
 .nav {
-  @include center-flex(row);
-  width: 100%;
   height: 100%;
-}
 
-.nav-list {
-  list-style: none; /* Убираем маркеры списка */
-  margin: 0;
-  padding: 0;
-  @include center-flex(row);
-  justify-content: space-between;
-  width: inherit;
-  height: inherit;
-}
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: inherit;
+    height: inherit;
+  }
 
-.nav-link {
-  color: inherit;
-  text-decoration: none; /* Убираем подчеркивание ссылок */
+  &-link {
+    color: inherit;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+
 }

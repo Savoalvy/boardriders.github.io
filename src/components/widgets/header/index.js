@@ -17,34 +17,28 @@ import { navigationUpperLayer, navigationMiddleLayer, navigationUnderLayer } fro
 
 function Header() {
   return (
-    <div className={style.header}>
-      <div className={style['first-layer']}>
-        <div className={style['content-width']}>
-          <div className={style['city-wrapper']}>
-            <IconLocation />
-            <Selector />
+    <header className={style['header']}>
+      <div className={style['header-top']}>
+        <div className={style['header__content']}>
+          <div className={style['header-top__location']}>
+            <div className={style['header-top__location--select']}>
+              <IconLocation />
+              <Selector />
+            </div>
+            <Navigation links={navigationUpperLayer} navClassName={style['header__nav--top']} />
           </div>
-          <Navigation
-            links={navigationUpperLayer}
-            navClassName={style['nav-first-layer']}
-            navLinkClassName={style['nav-link-first']}
-          />
-          <div className={style['icon-with-text-wrapper']}>
-            <IconWithText SvgComponent={FreeDeliveryIcon} text={'Бесплатная доставка *'} />
-            <IconWithText SvgComponent={PaymentIcon} text={'Оплата при получении'} />
-            <IconWithText SvgComponent={PurchaseReturnsIcon} text={'Возврат в течение 14 дней'} />
+          <div className={style['header-top__info']}>
+            <IconWithText SvgComponent={FreeDeliveryIcon} text="Бесплатная доставка *" />
+            <IconWithText SvgComponent={PaymentIcon} text="Оплата при получении" />
+            <IconWithText SvgComponent={PurchaseReturnsIcon} text="Возврат в течение 14 дней" />
           </div>
         </div>
       </div>
-      <div className={style['second-layer']}>
-        <div className={style['content-width']}>
-          <Navigation
-            links={navigationMiddleLayer}
-            navClassName={style['nav-second-layer']}
-            navLinkClassName={style['nav-link-second']}
-          />
+      <div className={style['header-middle']}>
+        <div className={style['header__content']}>
+          <Navigation links={navigationMiddleLayer} navClassName={style['header__nav--middle']} />
           <IconLogo />
-          <div className={style['icons-wrapper']}>
+          <div className={style['header-middle__buttons-wrapper']}>
             <Button svg={IconLogin} />
             <Button svg={IconFavourites} />
             <Button svg={IconBasket} />
@@ -52,16 +46,12 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className={style['third-layer']}>
-        <div className={style['content-width']}>
-          <Navigation
-            links={navigationUnderLayer}
-            navClassName={style['nav-third-layer']}
-            navLinkClassName={style['nav-link-third']}
-          />
+      <div className={style['header-lower']}>
+        <div className={style['header__content']}>
+          <Navigation links={navigationUnderLayer} navClassName={style['header__nav--lower']} />
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 
