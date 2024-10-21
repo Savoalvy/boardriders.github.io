@@ -4,6 +4,7 @@
   justify-content: space-between;
   height: 465px;
   border: 1px solid black;
+  background-color: white;
 
   &-picture {
     height: 370px;
@@ -11,14 +12,33 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: gray;
+    background-color: #ececec;
 
-    &__favorites {
-      border: 1px solid black;
+    &__favorite {
       border-radius: 50%;
       width: 40px;
       height: 40px;
-      margin: 5px 5px 5px auto;
+      margin: 10px 10px 0 auto;
+      background-color: white;
+      border: 1px solid #d9d9d9;
+      transition: 0.3s;
+
+      &:hover {
+        border-color: black;
+
+        svg path {
+          fill: white;
+        }
+      }
+
+      &--active {
+        transition: 0.3s;
+        background-color: black;
+
+        > svg path {
+          fill: white;
+        }
+      }
     }
 
     &__image {
@@ -28,20 +48,37 @@
       height: auto;
     }
 
-    &__discount {
+    &__bonuses {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 55px;
       width: 100%;
       max-height: 25px;
       height: 100%;
-      color: white;
-      background-color: red;
-      margin-right: auto;
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: -0.02em;
+
+      &--discount {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 55px;
+        width: 100%;
+        color: white;
+        background-color: #eb5757;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+      }
+
+      &--site {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 135px;
+        width: 100%;
+        color: white;
+        background-color: #333333;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+      }
     }
   }
 
@@ -67,11 +104,14 @@
     border: 1px solid black;
 
     &__total {
-      text-decoration: line-through;
       font-size: 18px;
       font-weight: 500;
       letter-spacing: -0.02em;
       margin: 0 20px 0 0;
+
+      &--discounted {
+        text-decoration: line-through;
+      }
 
       &::after {
         content: ' ₽';
