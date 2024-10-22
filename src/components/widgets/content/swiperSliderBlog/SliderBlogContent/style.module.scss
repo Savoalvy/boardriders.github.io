@@ -1,0 +1,87 @@
+.blog {
+  width: 100%;
+  height: 645px;
+  display: flex;
+  color: #ffffff;
+  background-color: black;
+
+  &-movie {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-info {
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__blogs {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &--name {
+        font-size: 21px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+      }
+
+      &--allLink {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        text-decoration: underline;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 550px;
+      max-height: 300px;
+      height: 100%;
+
+      &--title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+      }
+
+      &--description {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: -0.02em;
+        color: #828282;
+      }
+    }
+
+    &__readAll {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 200px;
+      width: 100%;
+
+      &--elementLink {
+        width: 30px;
+        height: 1px;
+        background-color: white;
+      }
+
+      &--link {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ import { Navigation, Pagination, Scrollbar, A11y, Keyboard } from 'swiper/module
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-import SliderContent from './sliderContent';
+import SliderContent from './SliderContent';
 import { SLIDER_ITEMS } from './config';
 
 const SliderSwiper = () => {
@@ -17,7 +17,7 @@ const SliderSwiper = () => {
         simulateTouch={true}
         keyboard={true}
         grabCursor={true}
-        touchRatio={1.4}
+        touchRatio={1.3}
         breakpoints={{
           1200: {
             slidesPerView: 4
@@ -25,7 +25,7 @@ const SliderSwiper = () => {
           880: {
             slidesPerView: 3
           },
-          600: {
+          100: {
             slidesPerView: 2
           }
         }}
