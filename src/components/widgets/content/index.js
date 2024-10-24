@@ -9,6 +9,7 @@ import ButtonDefault from '../../common/ButtonDefault';
 import SliderSwiper from './swiperSlider';
 import DiscountBlock from './DiscountBlock';
 import SliderSwiperBlog from './swiperSliderBlog';
+import LoyaltyProgram from './loyaltyProgram';
 
 function Content() {
   return (
@@ -45,6 +46,7 @@ function Content() {
         <ButtonDefault text={'Показать больше'} styles={style['content__btnMore']} />
       </div>
       <SliderSwiperBlog />
+      <LoyaltyProgram />
     </div>
   );
 }

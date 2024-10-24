@@ -20,7 +20,7 @@ export const SLIDER_BLOG_ITEMS = [
     )
   },
   {
-    id: 1,
+    id: 2,
     type: 'Блоги',
     price: 33290,
     title: 'Очень преочень длинное название блога',
@@ -40,7 +40,7 @@ export const SLIDER_BLOG_ITEMS = [
     )
   },
   {
-    id: 1,
+    id: 3,
     type: 'Блоги',
     price: 33290,
     title: 'Очень преочень длинное название блога',
@@ -60,7 +60,7 @@ export const SLIDER_BLOG_ITEMS = [
     )
   },
   {
-    id: 1,
+    id: 4,
     type: 'Блоги',
     price: 33290,
     title: 'Очень преочень длинное название блога',
@@ -80,7 +80,7 @@ export const SLIDER_BLOG_ITEMS = [
     )
   },
   {
-    id: 1,
+    id: 5,
     type: 'Блоги',
     price: 33290,
     title: 'Очень преочень длинное название блога',
@@ -100,7 +100,7 @@ export const SLIDER_BLOG_ITEMS = [
     )
   },
   {
-    id: 1,
+    id: 6,
     type: 'Блоги',
     price: 33290,
     title: 'Очень преочень длинное название блога',

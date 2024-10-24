@@ -1,6 +1,6 @@
 import style from './style.module.scss';
 import { SwiperSlide, Swiper } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, Keyboard, Mousewheel } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
@@ -12,7 +12,7 @@ const SliderSwiperBlog = () => {
   return (
     <div className={style['slider-container']}>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y, Keyboard, Mousewheel]}
+        modules={[Navigation, Pagination, Scrollbar, Keyboard, Mousewheel]}
         spaceBetween={30}
         slidesPerView={1}
         simulateTouch={true}

@@ -2,7 +2,10 @@
 
 
 .dashboard {
-  @include center-flex(column);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 
   > a {
     text-decoration: none;

@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   height: 465px;
-  border: 1px solid black;
   background-color: white;
 
   &-picture {
@@ -13,7 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #ececec;
+    background-color: #F9F9F9;
 
     &__favorite {
       border-radius: 50%;
@@ -43,7 +42,6 @@
     }
 
     &__image {
-      border: 1px solid black;
       max-width: 270px;
       width: 100%;
       height: auto;
@@ -84,7 +82,6 @@
   }
 
   &-description {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
 
@@ -102,7 +99,6 @@
   }
 
   &-price {
-    border: 1px solid black;
 
     &__total {
       font-size: 18px;
