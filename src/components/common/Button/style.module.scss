@@ -11,20 +11,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  svg path {
-    transition: fill 0.3s;
-  }
-
   &:focus {
     outline: none;
   }
-
-  &:hover {
-    svg path {
-      fill: #828b8d;
-      transition: fill 0.3s;
-    }
-  }
-
-
 }

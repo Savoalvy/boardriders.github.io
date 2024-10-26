@@ -1,0 +1,43 @@
+@import '../../../../styles/mixins';
+
+.wrapper {
+  width: 100%;
+  height: 94px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-size: 14px;
+
+  &-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1380px;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+
+    &__links {
+      a {
+        &:hover {
+          @include color(darkGray);
+        }
+      }
+    }
+
+    &-buttonsWrapper {
+      width: 220px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      font-size: 14px;
+      gap: 20px;
+
+      &--buttonStyles {
+        @include buttonIcon;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../../../styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 670px;
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+  }
+
+  &__button {
+    @include blackWhite;
+  }
+}

@@ -1,11 +1,12 @@
-@import '../../../../styles/mixins';
+@import '../../../../../styles/mixins';
 
 .wrapper {
   max-width: 240px;
   @include center-flex(row);
   justify-content: space-between;
+  gap: 10px;
 
   .text {
-    margin-left: 10px;
+
   }
 }

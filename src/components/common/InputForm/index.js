@@ -2,7 +2,7 @@ import React from 'react';
 import style from './style.module.scss';
 import { Input } from 'antd';
 import IconMail from '../../../assets/icons/Mail';
-import Button from '../ButtonSVG';
+import Button from '../Button';
 import IconTelegram from '../../../assets/icons/Telegram';
 
 const InputForm = () => (

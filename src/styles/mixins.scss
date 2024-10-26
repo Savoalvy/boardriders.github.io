@@ -1,47 +1,11 @@
 @import './variables';
 
-@mixin apply-font($font-map) {
-  @each $property, $value in $font-map {
-    #{$property}: #{$value};
-  }
-}
-
-// Вспомогательная функция для глубокой выборки значений из карты
-@function map-get-deep($map, $keys...) {
-  @if length($keys) == 0 {
-    @return $map;
-  }
-
-  $key: nth($keys, 1);
-  $rest: if(length($keys) > 1, slice($keys, 2), ());
-
-  @if map-has-key($map, $key) {
-    @return map-get-deep(map-get($map, $key), $rest...);
-  }
-
-  @return null;
-}
-
-// Миксин для установки текстовых значений
-@mixin text-content($path...) {
-  $value: map-get-deep($text-config, $path);
-  content: '#{$value}';
-}
-
-// Позиционирование контента
-
-// Центрирование по вертикали/горизонтали
-
 @mixin center-flex($flex-direction: column) {
   display: flex;
   flex-direction: $flex-direction;
-  justify-content: center; // Центрирование по вертикали
-  align-items: center; // Центрирование по горизонтали
+  justify-content: center;
+  align-items: center;
 }
-
-// Ширина контента
-
-// Цвет бэкграунда
 
 @mixin background-color($color) {
   background-color: map-get($colors, $color);
@@ -53,4 +17,70 @@
 
 @mixin border-color($color) {
   border-color: map-get($colors, $color);
+}
+
+@mixin buttonIcon {
+  svg path {
+    transition: fill 0.3s;
+  }
+
+  &:hover {
+    svg path {
+      fill: #828b8d;
+    }
+  }
+}
+
+@mixin blackWhite {
+  @include background-color(black);
+  @include color(white);
+  max-width: 408px;
+  width: 100%;
+  height: 50px;
+  transition: 0.3s;
+
+  &:hover {
+    @include color(darkGray);
+  }
+}
+
+@mixin whiteBlack {
+  @include background-color(white);
+  @include color(black);
+  @include border-color(black);
+  height: 50px;
+  max-width: 408px;
+  width: 100%;
+  transition: 0.3s;
+
+  &:hover {
+    @include color(darkGray);
+  }
+}
+
+@mixin redWhite {
+  @include background-color(red);
+  @include color(white);
+  height: 70px;
+  max-width: 408px;
+  width: 100%;
+  transition: 0.3s;
+
+  &:hover {
+    @include color(gray);
+  }
+}
+
+@mixin whiteRed {
+  @include background-color(white);
+  @include color(red);
+  @include border-color(red);
+  height: 70px;
+  max-width: 408px;
+  width: 100%;
+  transition: 0.3s;
+
+  &:hover {
+    @include color(darkGray);
+  }
 }

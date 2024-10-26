@@ -1,0 +1,30 @@
+@import "../../../../styles/mixins";
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 667px;
+  width: 100%;
+  max-height: 48px;
+  height: 100%;
+  border: 1px solid #ffffff33;
+  padding: 0 20px;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 430px;
+    width: 100%;
+
+    &--percent {
+      @include color(red);
+    }
+
+  }
+}
+
+.button {
+  @include buttonIcon;
+}

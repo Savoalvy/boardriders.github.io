@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import style from './style.module.scss';
-import Button from '../../../../common/ButtonSVG';
-import Star from '../../../../../assets/icons/Star';
+import Button from '../../../../../common/Button';
+import Star from '../../../../../../assets/icons/Star';
 
 const SliderContent = ({ imageSrc, name, type, price, discountPrice, discount, onlySite }) => {
   const [isFavorite, setIsFavorite] = useState(false);

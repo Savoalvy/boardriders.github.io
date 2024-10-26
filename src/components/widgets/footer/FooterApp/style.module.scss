@@ -1,0 +1,32 @@
+@import "../../../../styles/mixins";
+
+.wrapper {
+  max-width: 350px;
+  width: 100%;
+  max-height: 165px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  &-description {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &-icons {
+    display: flex;
+    gap: 30px;
+
+    &-buttonsWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}
+
+.button {
+  @include buttonIcon;
+}

@@ -13,7 +13,7 @@ export const LINKS = {
       linkName: 'Блоги'
     }
   ],
-  headerNavigationLinksMiddleLayer: [
+  headerNavigationLinksHeaderMain: [
     {
       link: 'https://www.example.com',
       linkName: 'Мужчинам'

@@ -1,12 +1,12 @@
 import style from './style.module.scss';
 
-const Navigation = ({ links, navClassName, navLinkClassName, ulClassName }) => {
+const Navigation = ({ links, className }) => {
   return (
-    <nav className={`${style['nav']} ${navClassName}`}>
-      <ul className={`${style['nav-list']} ${ulClassName}`}>
+    <nav>
+      <ul className={`${style['list']} ${className}`}>
         {links.map((link, index) => (
           <li key={index}>
-            <a href={link.href} className={`${style['nav-link']} ${navLinkClassName}`}>
+            <a href={link.href} className={style['link']}>
               {link.text}
             </a>
           </li>

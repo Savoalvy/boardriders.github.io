@@ -1,4 +1,4 @@
-import img from '../../../../assets/img/productImg.png';
+import img from '../../../../../assets/img/productImg.png';
 
 export const SLIDER_ITEMS = [
   {

@@ -1,3 +1,8 @@
+import IconLogin from '../../../assets/icons/Login';
+import IconFavourites from '../../../assets/icons/Favourites';
+import IconBasket from '../../../assets/icons/Basket';
+import IconSearch from '../../../assets/icons/Search';
+
 export const navigationUpperLayer = [
   {
     href: '#',
@@ -13,7 +18,22 @@ export const navigationUpperLayer = [
   }
 ];
 
-export const navigationMiddleLayer = [
+export const buttonsUpperLayer = [
+  {
+    svg: IconLogin
+  },
+  {
+    svg: IconFavourites
+  },
+  {
+    svg: IconBasket
+  },
+  {
+    svg: IconSearch
+  }
+];
+
+export const navigationHeaderMain = [
   {
     href: '#',
     text: 'Мужчинам'

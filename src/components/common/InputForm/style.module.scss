@@ -1,9 +1,8 @@
-/* style.module.scss */
+@import "../../../styles/mixins";
 
 .inputStyles {
   width: 100%;
-  max-height: 50px;
-  height: 100%;
+  height: 50px;
   font-size: 14px;
   font-weight: 500;
   line-height: 25px;
@@ -16,12 +15,13 @@
   }
 
   &__button {
-    /* Ваши стили для кнопки */
+    color: white;
+    transition: 0.3s;
+    @include buttonIcon;
   }
 
-  /* Измените селектор для плейсхолдера */
-  &::placeholder {
-    color: red; /* Замените на нужный цвет */
-    opacity: 1; /* Установите прозрачность, если это необходимо */
+  input::placeholder {
+    color: black; /* Ваш цвет */
+    opacity: 1;
   }
 }
