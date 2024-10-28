@@ -8,22 +8,22 @@ import IconMail from '../../../../assets/icons/Mail';
 const LoyaltyProgram = () => {
   return (
     <div className={style['loyalty']}>
-      {LOYALTY_BLOCKS.map((block, index) => (
+      {LOYALTY_BLOCKS.map((item, index) => (
         <div key={index} className={style['loyalty-block']}>
-          <img src={block.image} alt="Картинка" />
+          <img src={item.src} alt="Картинка" />
           <div className={style['loyalty-block-content']}>
             <div
               className={`${style['loyalty-block-content__icon']} ${
-                block.icon.type === IconMail ? style['loyalty-block-content__iconMail'] : ''
+                item.icon.type === IconMail ? style['loyalty-block-content__iconMail'] : ''
               }`}>
-              {block.icon}
+              {item.icon}
             </div>
-            <span className={style['loyalty-block-content__title']}>{block.title}</span>
-            <span className={style['loyalty-block-content__description']}>{block.description}</span>
-            {block.button && (
-              <Button className={style['loyalty-block-content__button']} text={block.button} />
+            <span className={style['loyalty-block-content__title']}>{item.title}</span>
+            <span className={style['loyalty-block-content__description']}>{item.description}</span>
+            {item.button && (
+              <Button className={style['loyalty-block-content__button']} text={item.button} />
             )}
-            {block.inputForm && <InputForm />}
+            {item.inputForm && <InputForm />}
           </div>
         </div>
       ))}

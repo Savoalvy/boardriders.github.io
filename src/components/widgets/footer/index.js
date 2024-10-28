@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './style.module.scss';
 import IconBackground from '../../../assets/icons/Background';
-import FooterLogo from '../../../assets/img/footerLogo.png';
 import classNames from 'classnames';
 import FooterSocial from './FooterSocial/index';
 import FooterNavigation from './FooterNavigation';
@@ -16,7 +15,11 @@ function Footer() {
       <div className={style['footer__container']}>
         <div className={style['footer__header']}>
           <div className={style['footer__logo']}>
-            <img src={FooterLogo} alt="Discount" className={style['footer__logo--image']} />
+            <img
+              src={'/static/img/footerLogo.png'}
+              alt="Discount"
+              className={style['footer__logo--image']}
+            />
           </div>
           <FooterRef />
         </div>

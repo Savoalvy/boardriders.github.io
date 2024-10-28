@@ -1,71 +1,82 @@
-import img from '../../../assets/img/img.png';
-import img_1 from '../../../assets/img/img_1.png';
-import img_2 from '../../../assets/img/img_2.png';
-import img_3 from '../../../assets/img/img_3.png';
-import img_4 from '../../../assets/img/img_4.png';
-import img_5 from '../../../assets/img/img_5.png';
-import img_6 from '../../../assets/img/img_6.png';
-import img_7 from '../../../assets/img/img_7.png';
-import img_8 from '../../../assets/img/img_8.png';
-import img_9 from '../../../assets/img/img_9.png';
-import Snowboard from '../../../assets/img/discount-image-snowboard.png';
-import Flowboard from '../../../assets/img/discount-image-flowboard.png';
-import loyalty_1 from '../../../assets/img/loyaltyImg_1.png';
-import loyalty_2 from '../../../assets/img/loyaltyImg_2.png';
 import BoardridersClubLogo from '../../../assets/icons/BoardridersClubLogo';
 import IconMail from '../../../assets/icons/Mail';
+import ProductBlock from './contentProductBlock';
+import DiscountBlock from './DiscountBlock';
 
 export const ITEMS = [
   {
-    src: img
+    src: '/static/img/img.png'
   },
   {
-    src: img_1
+    src: '/static/img/img_1.png'
   },
   {
-    src: img_2
+    src: '/static/img/img_2.png'
   },
   {
-    src: img_3
+    src: '/static/img/img_3.png'
   },
   {
-    src: img_4
+    src: '/static/img/img_4.png'
   },
   {
-    src: img_5
+    src: '/static/img/img_5.png'
   },
   {
-    src: img_6,
-    className: 'content-brand__image--anu'
+    src: '/static/img/img_6.png',
+    className: 'wrapper__image--anu'
   },
   {
-    src: img_7
+    src: '/static/img/img_7.png'
   },
   {
-    src: img_8
+    src: '/static/img/img_8.png'
   },
   {
-    src: img_9
+    src: '/static/img/img_9.png'
   }
 ];
 export const DISCOUNT_ITEMS = [
-  { image: Snowboard, description: 'Название акции №1' },
-  { image: Flowboard, description: 'Название акции №2' }
+  { src: '/static/img/discount-image-snowboard.png', description: 'Название акции №1' },
+  { src: '/static/img/discount-image-flowboard.png', description: 'Название акции №2' }
 ];
 
 export const LOYALTY_BLOCKS = [
   {
-    image: loyalty_1,
+    src: '/static/img/loyaltyImg_1.png',
     icon: <BoardridersClubLogo />,
     title: 'Программа лояльности',
     description: 'Зарабатывайте баллы и получайте преимущества',
     button: 'Вступить в клуб'
   },
   {
-    image: loyalty_2,
+    src: '/static/img/loyaltyImg_2.png',
     icon: <IconMail />,
     title: 'Скидка -10%',
     description: 'За подписку на наши новости',
     inputForm: true
+  }
+];
+
+export const PRODUCT_DISCOUNT_COMPONENTS_RENDER = [
+  {
+    type: 'product',
+    component: ProductBlock,
+    props: { title: 'Новинки', buttonName: 'Показать больше' }
+  },
+  {
+    type: 'discount',
+    component: DiscountBlock,
+    props: {
+      title: 'Название Акции',
+      description:
+        'Меня не спрашивали, а надо было спросить, что означает имя Заратустры именно в моих устах — в устах первого имморалиста: ведь то, в чём состоит неслыханная уникальность этого перса в истории, являет собою противоположность как раз этому.',
+      src: '/static/img/discountBlockImg.png'
+    }
+  },
+  {
+    type: 'product',
+    component: ProductBlock,
+    props: { title: 'DC Shoes популярное в коллекции', buttonName: 'Показать больше' }
   }
 ];

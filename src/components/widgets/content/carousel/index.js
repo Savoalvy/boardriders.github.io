@@ -1,15 +1,14 @@
 import React from 'react';
 import { Carousel } from 'antd';
 import style from './style.module.scss';
-import image from '../../../../assets/img/slider__icon.jpg';
 import Slide from './CarouselSlide';
+import { SLIDES_CONTENT } from './config';
 
 const Slider = () => (
   <Carousel className={style['slider']} autoplay>
-    <Slide image={image} description="WINTER SALE ДО -70%" />
-    <Slide image={image} description="WINTER SALE ДО -70%" />
-    <Slide image={image} description="WINTER SALE ДО -70%" />
-    <Slide image={image} description="WINTER SALE ДО -70%" />
+    {SLIDES_CONTENT.map((slide, index) => (
+      <Slide key={index} srs={slide.src} description={slide.description} />
+    ))}
   </Carousel>
 );
 export default Slider;

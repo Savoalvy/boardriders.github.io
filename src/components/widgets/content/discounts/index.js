@@ -6,7 +6,7 @@ function Discounts() {
   return (
     <div className={style['wrapper']}>
       {DISCOUNT_ITEMS.map((item, index) => (
-        <Discount key={index} image={item.image} description={item.description} />
+        <Discount key={index} src={item.src} description={item.description} />
       ))}
     </div>
   );

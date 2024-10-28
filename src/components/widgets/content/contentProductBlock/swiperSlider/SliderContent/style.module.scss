@@ -100,12 +100,14 @@
   }
 
   &-price {
+    display: flex;
+    gap: 20px;
+
 
     &__total {
       font-size: 18px;
       font-weight: 500;
       letter-spacing: -0.02em;
-      margin: 0 20px 0 0;
 
       &--discounted {
         text-decoration: line-through;
@@ -127,13 +129,4 @@
       }
     }
   }
-
-  //@media (max-width: 1150px) {
-  //  height: 400px;
-  //
-  //  &-picture {
-  //    height: 90%;
-  //  }
-  //
-  //}
 }

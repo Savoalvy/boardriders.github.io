@@ -3,7 +3,7 @@ import style from './style.module.scss';
 import Button from '../../../../../common/Button';
 import Star from '../../../../../../assets/icons/Star';
 
-const SliderContent = ({ imageSrc, name, type, price, discountPrice, discount, onlySite }) => {
+const SliderContent = ({ src, name, type, price, discountPrice, discount, onlySite }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const favorite = () => setIsFavorite((prevState) => !prevState);
 
@@ -18,7 +18,7 @@ const SliderContent = ({ imageSrc, name, type, price, discountPrice, discount, o
           onClick={favorite}
         />
         <div className={style['product-picture__image']}>
-          <img src={imageSrc} alt={name} />
+          <img src={src} alt={name} />
         </div>
         <div className={style['product-picture__bonuses']}>
           {discount && (

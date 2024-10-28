@@ -34,7 +34,7 @@ const SliderSwiper = () => {
         {SLIDER_ITEMS.map((item) => (
           <SwiperSlide key={item.id} className={style['swiper-slide']}>
             <SliderContent
-              imageSrc={item.imageSrc}
+              src={item.src}
               name={item.name}
               type={item.type}
               price={item.price}
