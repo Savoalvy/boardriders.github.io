@@ -1,4 +1,4 @@
-@import "../../../styles/mixins";
+@import '../../../styles/mixins';
 
 .inputStyles {
   width: 100%;
@@ -9,19 +9,4 @@
   letter-spacing: -0.02em;
   border-radius: 0;
   padding: 10px 20px 10px 10px;
-
-  svg path {
-    fill: black;
-  }
-
-  &__button {
-    color: white;
-    transition: 0.3s;
-    @include buttonIcon;
-  }
-
-  input::placeholder {
-    color: black; /* Ваш цвет */
-    opacity: 1;
-  }
 }

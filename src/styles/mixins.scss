@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-@mixin background-color($color) {
+@mixin background($color) {
   background-color: map-get($colors, $color);
 }
 
@@ -32,7 +32,7 @@
 }
 
 @mixin blackWhite {
-  @include background-color(black);
+  @include background(black);
   @include color(white);
   max-width: 408px;
   width: 100%;
@@ -45,7 +45,7 @@
 }
 
 @mixin whiteBlack {
-  @include background-color(white);
+  @include background(white);
   @include color(black);
   @include border-color(black);
   height: 50px;
@@ -59,7 +59,7 @@
 }
 
 @mixin redWhite {
-  @include background-color(red);
+  @include background(red);
   @include color(white);
   height: 70px;
   max-width: 408px;
@@ -72,7 +72,7 @@
 }
 
 @mixin whiteRed {
-  @include background-color(white);
+  @include background(white);
   @include color(red);
   @include border-color(red);
   height: 70px;

@@ -1,20 +1,26 @@
-export const selectorCityItems = [
+export const citys = [
   {
-    text: 'Брест'
+    label: 'Брест',
+    value: 'Брест'
   },
   {
-    text: 'Минск'
+    label: 'Минск',
+    value: 'Минск'
   },
   {
-    text: 'Гродно'
+    label: 'Гродно',
+    value: 'Гродно'
   },
   {
-    text: 'Могилев'
+    label: 'Могилев',
+    value: 'Могилев'
   },
   {
-    text: 'Витебск'
+    label: 'Витебск',
+    value: 'Витебск'
   },
   {
-    text: 'Гомель'
+    label: 'Гомель',
+    value: 'Гомель'
   }
 ];

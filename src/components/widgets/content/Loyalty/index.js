@@ -4,6 +4,7 @@ import Button from '../../../common/Button';
 import InputForm from '../../../common/InputForm';
 import { LOYALTY_BLOCKS } from '../config';
 import IconMail from '../../../../assets/icons/Mail';
+import IconTelegram from '../../../../assets/icons/Telegram';
 
 const LoyaltyProgram = () => {
   return (
@@ -23,7 +24,14 @@ const LoyaltyProgram = () => {
             {item.button && (
               <Button className={style['loyalty-block-content__button']} text={item.button} />
             )}
-            {item.inputForm && <InputForm />}
+            {item.inputForm && (
+              <InputForm
+                placeholder="Email"
+                prefix={<IconMail />}
+                suffix={<Button svg={IconTelegram} />}
+                rootClassName={style['loyalty-block-content__input']}
+              />
+            )}
           </div>
         </div>
       ))}

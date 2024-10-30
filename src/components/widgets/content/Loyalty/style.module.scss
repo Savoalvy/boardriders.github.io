@@ -56,6 +56,24 @@
         letter-spacing: -0.02em;
       }
 
+      &__input {
+        svg path {
+          fill: black;
+        }
+
+        &__button {
+          color: white;
+          transition: 0.3s;
+          @include buttonIcon;
+        }
+
+        input::placeholder {
+          color: black; /* Ваш цвет */
+          opacity: 1;
+        }
+
+      }
+
       &__button {
         @include whiteBlack;
       }

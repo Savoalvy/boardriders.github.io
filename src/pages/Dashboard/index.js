@@ -1,15 +1,11 @@
 import React from 'react';
-import Header from '../../components/widgets/header/index';
-import styles from './style.module.scss';
-import Footer from '../../components/widgets/footer/index';
+import style from './style.module.scss';
 import Content from '../../components/widgets/content/index';
 
 function Dashboard() {
   return (
-    <div className={styles.dashboard}>
-      <Header />
+    <div className={style['dashboard']}>
       <Content />
-      <Footer />
     </div>
   );
 }

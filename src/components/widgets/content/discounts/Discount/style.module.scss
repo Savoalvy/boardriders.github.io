@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include background-color(black);
+    @include background(black);
     @include color(white);
     z-index: 1;
     width: 100%;

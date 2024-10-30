@@ -1,60 +1,48 @@
-import React, { useState } from 'react';
-import { DownOutlined } from '@ant-design/icons';
-import { Dropdown, Menu, Space } from 'antd';
-import './style.module.scss';
-import { selectorCityItems } from './config'; // Подключите файл стилей, если он существует
+import React from 'react';
+import { ConfigProvider, Select } from 'antd';
+import style from './style.scss';
+import { citys } from './config';
 
-const Selector = () => {
-  // Состояние для хранения выбранного значения
-  const [selectedValue, setSelectedValue] = useState('Брест');
+const labelRender = (props) => {
+  const { label, value } = props;
 
-  // Состояние для управления видимостью меню
-  const [open, setOpen] = useState(false);
+  const prefixText = 'Ваш регион доставки: ';
 
-  // Использование mapText для создания элементов меню
-  const items = selectorCityItems.map((item) => ({
-    text: item.text
-  }));
-
-  // Функция обработки клика на элемент меню
-  const handleMenuClick = (e) => {
-    // Использование `text` как ключа для поиска выбранного элемента
-    const selectedItem = items.find((item) => item.text === e.key);
-    if (selectedItem) {
-      setSelectedValue(selectedItem.text);
-    }
-    setOpen(false); // Закрыть меню после выбора
-  };
-
-  // Функция обработки изменения состояния открытия меню
-  const handleOpenChange = (flag) => {
-    setOpen(flag);
-  };
-
-  // Создание меню
-  const menu = (
-    <Menu onClick={handleMenuClick}>
-      {items.map((item) => (
-        <Menu.Item key={item.text}>{item.text}</Menu.Item>
-      ))}
-    </Menu>
-  );
-
+  if (label) {
+    return (
+      <span>
+        {prefixText}
+        {value}
+      </span>
+    );
+  }
   return (
-    <Dropdown overlay={menu} trigger={['click']} open={open} onOpenChange={handleOpenChange}>
-      <a onClick={(e) => e.preventDefault()}>
-        <Space>
-          {`Ваш регион доставки: ${selectedValue}`}
-          <DownOutlined
-            style={{
-              transition: 'transform 0.3s',
-              transform: open ? 'rotate(180deg)' : 'rotate(0deg)'
-            }}
-          />
-        </Space>
-      </a>
-    </Dropdown>
+    <span>
+      {prefixText}
+      {citys[0].value}
+    </span>
   );
 };
+const Selector = () => (
+  <ConfigProvider
+    theme={{
+      token: {
+        colorBgContainer: '#000000', // Черный фон основного поля
+        colorBgElevated: '#000000', // Черный фон выпадающего списка
+        colorTextPlaceholder: '#ffffff', // Белый текст плейсхолдера
+        colorText: '#ffffff', // Белый текст в основном поле
+        controlItemBgActive: '#333333', // Фон активного элемента в выпадающем списке
+        colorTextDescription: '#ffffff' // Белый текст в опциях
+      }
+    }}>
+    <Select
+      className={style['selector']}
+      labelRender={labelRender}
+      defaultValue="1"
+      options={citys}
+      bordered={false}
+    />
+  </ConfigProvider>
+);
 
 export default Selector;

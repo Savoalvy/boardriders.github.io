@@ -1,17 +1,15 @@
 import React from 'react';
 import style from './style.module.scss';
 import { Input } from 'antd';
-import IconMail from '../../../assets/icons/Mail';
-import Button from '../Button';
-import IconTelegram from '../../../assets/icons/Telegram';
+import classNames from 'classnames';
 
-const InputForm = () => (
+const InputForm = ({ placeholder, prefix, suffix, rootClassName }) => (
   <>
     <Input
-      rootClassName={style['inputStyles']}
-      placeholder="Email"
-      prefix={<IconMail />}
-      suffix={<Button className={style['inputStyles__button']} svg={IconTelegram} />}
+      rootClassName={classNames(rootClassName, style['inputStyles'])}
+      placeholder={placeholder}
+      prefix={prefix}
+      suffix={suffix}
     />
   </>
 );
