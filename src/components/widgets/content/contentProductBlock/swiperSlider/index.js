@@ -32,7 +32,7 @@ const SliderSwiper = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}>
         {SLIDER_ITEMS.map((item) => (
-          <SwiperSlide key={item.id} className={style['swiper-slide']}>
+          <SwiperSlide key={item.index} className={style['swiper-slide']}>
             <SliderContent
               src={item.src}
               name={item.name}

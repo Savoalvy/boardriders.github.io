@@ -5,6 +5,7 @@ import HeaderMain from './HeaderMain';
 import HeaderFooter from './HeaderFooter';
 
 function Header() {
+  console.log('Header rendered');
   return (
     <header className={style['header']}>
       <HeaderHeader />

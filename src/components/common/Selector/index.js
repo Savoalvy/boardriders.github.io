@@ -40,7 +40,7 @@ const Selector = () => (
       labelRender={labelRender}
       defaultValue="1"
       options={citys}
-      bordered={false}
+      variant={'borderless'}
     />
   </ConfigProvider>
 );

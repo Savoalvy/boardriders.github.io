@@ -1,0 +1,15 @@
+.tableStyles {
+  .ant-table-wrapper {
+    .ant-table {
+      // Обнуление бордеров таблицы
+      border: none !important; // Убирает границу у таблицы
+      border-radius: 0 !important; // Убирает закругление
+
+      // Если нужно убрать границы у ячеек
+      th.ant-table-cell,
+      td.ant-table-cell {
+        border: none !important; // Убирает границу у ячеек
+      }
+    }
+  }
+}

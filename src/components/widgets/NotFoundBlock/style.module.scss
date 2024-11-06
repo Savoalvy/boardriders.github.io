@@ -1,0 +1,33 @@
+@import "../../../styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 10px;
+
+  &-error {
+    font-size: 400px;
+    @include style404;
+
+
+    @media (max-width: 800px) {
+      font-size: 45vw;
+    }
+
+  }
+
+  &-description {
+    font-size: 40px;
+  }
+
+  &-button {
+    @include blackWhite;
+  }
+
+}

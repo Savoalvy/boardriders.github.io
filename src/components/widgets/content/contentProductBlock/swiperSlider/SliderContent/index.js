@@ -22,7 +22,7 @@ const SliderContent = ({ src, name, type, price, discountPrice, discount, onlySi
         </div>
         <div className={style['product-picture__bonuses']}>
           {discount && (
-            <span className={style['product-picture__bonuses--discount']}>{discount}</span>
+            <span className={style['product-picture__bonuses--discount']}>-{discount}%</span>
           )}
           {onlySite && <span className={style['product-picture__bonuses--site']}>{onlySite}</span>}
         </div>

@@ -9,6 +9,7 @@ import FooterApp from './FooterApp';
 import FooterRef from './FooterReferal';
 
 function Footer() {
+  console.log('Footer rendered');
   return (
     <footer className={style['footer']}>
       <IconBackground />
